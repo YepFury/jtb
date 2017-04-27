@@ -1,0 +1,92 @@
+
+.form-title {
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    background-color: #ddd;
+    padding-left: 60rpx;
+    font-size: 26rpx;
+    color: #666;
+    position: relative;
+}
+.form-title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 30rpx;
+    width: 8rpx;
+    top: 50%;
+    left: 30rpx;
+    transform: translateY(-50%);
+    background-color: #17b3ef;
+}
+.form-item {
+    height: 100rpx;
+    border-bottom: 1px solid #eee;
+    padding: 10rpx 0;
+    box-sizing: border-box;
+}
+.important {
+    color: #f00;
+    font-size: 24rpx;
+    position: absolute;
+    right: 30rpx;
+    line-height: 80rpx;
+}
+label {
+    width: 25%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 28rpx;
+    float: left;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+}
+input {
+    width: 75%;
+    height: 80rpx;
+    line-height: 80rpx;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 60rpx;
+    font-size: 28rpx;
+    color: #666;
+}
+.num-car {
+    padding-left: 160rpx;
+}
+picker {
+    width: 75%;
+    height: 80rpx;
+    line-height: 80rpx;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 60rpx;
+    font-size: 28rpx;
+    color: #666;
+}
+.car-num {
+    position: absolute;
+    width: 160rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    left: 25%;
+    color: #000;
+}
+button {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 30rpx;
+    background-color: #17b3ef;
+    color: #fff;
+    letter-spacing: 26rpx;
+
+}
+image {
+    width: 20rpx;
+    height: 20rpx;
+}

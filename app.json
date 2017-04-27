@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/tjac/tjac",
+    "pages/sgcl/sgcl"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#17b3ef",
+    "navigationBarTitleText": "交通宝",
+    "navigationBarTextStyle":"white"
+  }
+}

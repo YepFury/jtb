@@ -1,0 +1,76 @@
+
+<!--index.wxml-->
+<scroll-view scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+<view class="header">
+  <view class="limit">
+    <text> <text class="tips">限行尾号</text>  {{wh}}</text>
+  </view>
+  <view class="weather">
+    <image src="{{weatherData.img}}"></image>
+    <text>{{weatherData.temperature}}</text> 
+    <text class="wash-car">{{washingCar.title}}  {{washingCar.zs}}</text>
+  </view>
+  <button bindtap="toTjac"><image src="https://traffic-1253661417.costj.myqcloud.com/images/icons/jtb_icn_add@2x.png"></image> 添加爱车，畅享生活服务</button>
+</view>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="#fff100">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" height="100" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="section">
+  <view class="item" wx:for="{{icons}}">
+    <image bindtap="{{item.tap}}" src="{{item.url}}"></image>
+    <text bindtap="{{item.tap}}">{{item.text}}</text>
+  </view>
+</view>
+<view class="car">
+  <view class="title">
+    附近
+  </view>
+  <view class="nearby">
+    <view class="nearby-service" wx:for="{{nearby}}">
+      <view class="icon-item">
+        <image src="{{item.url}}"></image>
+      </view>
+      <text>{{item.text}}</text>
+    </view>
+  </view>
+</view>
+<view class="car">
+  <view class="title">
+    服务
+  </view>
+  <view class="service">
+    <view class="new-car">
+      <image src="https://traffic-1253661417.costj.myqcloud.com/images/icons/jtb_pic_wash_car@2x.png"></image>
+      <text>新车购买</text>
+    </view>
+    <view class="car-2nd">
+      <image src="https://traffic-1253661417.costj.myqcloud.com/images/icons/lq_icn_car@2x.png"></image>
+      <text>金融汽车</text>
+    </view>
+    <view class="car-2nd">
+      <image src="https://traffic-1253661417.costj.myqcloud.com/images/icons/jtb_pic_second_hand_car@2x.png"></image>
+      <text>二手车评估</text>
+    </view>
+    <view class="de-driving">
+      <text>代驾服务</text>
+      <image src="https://traffic-1253661417.costj.myqcloud.com/images/icons/tp_icn_user@2x.png"></image>
+    </view>
+    <view class="de-driving">
+      <text>车险投保</text>
+      <image src="https://traffic-1253661417.costj.myqcloud.com/images/icons/tp_icn_material@2x.png"></image>
+    </view>
+  </view>
+</view>
+<view class="car">
+  <view class="title">
+    优惠活动
+  </view>
+  <view class="action">
+    <image src="http://jtb-1253661417.cossh.myqcloud.com/images/%E9%A6%96%E9%A1%B5/ad.png"></image>
+  </view>
+</view>
+</scroll-view>

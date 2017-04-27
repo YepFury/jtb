@@ -1,0 +1,54 @@
+<view class="form">
+  <view class="form-title">基本信息</view>
+  <view class="form-content">
+    <view class="form-item">
+      <label>车牌号</label>
+      <picker class="car-num" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{array[index]}}
+      <image src="https://traffic-1253661417.costj.myqcloud.com/images/icons/jtb_icn_choose@2x.png"></image>
+    </view>
+  </picker>
+      <input class="num-car" type="text" placeholder="请输入车牌号" />
+      <view class="important">*</view>
+    </view>
+    <view class="form-item">
+      <label>车架号</label>
+      <input type="text" maxlength="6" placeholder="请输入车架号后六位" />
+    </view>
+    <view class="form-item">
+      <label>发动机号</label>
+      <input type="text" maxlength="4" placeholder="请输入发动机号后四位" />
+    </view>
+  </view>
+  <view class="form-title">其他信息</view>
+  <view class="form-content">
+    <view class="form-item">
+      <label>保险公司</label>
+      <input type="text" placeholder="请选择保险公司" />
+    </view>
+    <view class="form-item">
+      <label>保险单号</label>
+      <input type="text" placeholder="请输入保险单号" />
+    </view>
+    <view class="form-item">
+      <label>车品牌</label>
+      <input type="text" placeholder="请输入车辆品牌" />
+    </view>
+    <view class="form-item">
+      <label>车型</label>
+      <input type="text" placeholder="请输入年份 排量 车版" />
+    </view>
+    <view class="form-item">
+      <label>上路时间</label>
+      <input type="text" placeholder="请选择车辆上路时间" />
+    </view>
+    <view class="form-item">
+      <label>注册时间</label>
+        <picker class="{cc}}" mode="date" value="{{dateValue}}" start="1999-01-01" end="2099-12-31" bindchange="datePickerBindchange">
+    {{dateValue}}
+  </picker>
+    </view>
+  </view>
+  <button>绑定</button>
+</view>
