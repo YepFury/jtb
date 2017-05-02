@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/tjac/tjac",
-    "pages/sgcl/sgcl"
+    "pages/sgcl/sgcl",
+    "pages/sup/sup"
   ],
   "window":{
     "backgroundTextStyle":"light",

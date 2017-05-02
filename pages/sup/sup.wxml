@@ -1,0 +1,16 @@
+<view class="sup" bindtap="toSup">
+  体验版
+</view>
+<view class="info">
+  <text>{{area}}</text>
+  <button>{{person}}人支持</button>
+</view>
+<view class="tips">
+  <text class="title">功能简介:</text>
+  <text>事故在线处理、事故快处、报警、私了。</text>
+  <text>事故快处：  在线审核，责任认定</text>
+  <text>事故报警：  出警过程实时透明</text>
+  <text>私了：  历史记录可追溯</text>
+  <text>欢迎测试体验，体验信息不会提交至交警，请放心体验。</text>
+</view>
+<button class="support">支持</button>

@@ -6,7 +6,7 @@
       <picker class="car-num" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
     <view class="picker">
       {{array[index]}}
-      <image src="https://traffic-1253661417.costj.myqcloud.com/images/icons/jtb_icn_choose@2x.png"></image>
+      <image src="http://jtb-1253661417.cossh.myqcloud.com/images/%E6%88%91%E7%9A%84%E7%88%B1%E8%BD%A6/jtb_icn_choose%402x.png"></image>
     </view>
   </picker>
       <input class="num-car" type="text" placeholder="请输入车牌号" />

@@ -137,7 +137,7 @@ Page({
   },
   toSgcl: function () {
     wx.navigateTo({
-      url: '../sgcl/sgcl',
+      url: '../sup/sup',
       success: function(){
       },
       fail: function() {
@@ -150,6 +150,21 @@ Page({
       success: function(){
       },
       fail: function() {
+      }
+    })
+  },
+  buyNew: function() {
+    console.log(1)
+    wx.navigateTo({
+      url: 'http://mai.m.yiche.com/',
+      success: function(res){
+        // success
+      },
+      fail: function(res) {
+        // fail
+      },
+      complete: function(res) {
+        // complete
       }
     })
   }

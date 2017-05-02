@@ -1,0 +1,114 @@
+<view class="accident">
+  <view class="ac-item">
+    <label>事故地址</label>
+    <view class="lh">
+      <text bindtap="openMap">{{address}}</text>
+    </view>
+  </view>
+  <view class="ac-item">
+    <label>事故时间</label>
+    <view class="lh">
+      <text>{{time}}</text>
+    </view>
+  </view>
+</view>
+<view class="upload-img">
+  <view class="title">图片{{imgNum}}/7</view>
+  <view class="upload">
+    <view class="upload-item">
+      <image bindtap="up" src="http://jtb-1253661417.cossh.myqcloud.com/images/%E4%BA%8B%E6%95%85%E5%A4%84%E7%90%86/icons/jtb_icn_add_pic_front%402x.png"></image>
+      <text>前方部位</text>
+    </view>
+    <view class="upload-item">
+      <image src="http://jtb-1253661417.cossh.myqcloud.com/images/%E4%BA%8B%E6%95%85%E5%A4%84%E7%90%86/icons/jtb_icn_add_pic_side%402x.png"></image>
+      <text>详细部位</text>
+    </view>
+    <view class="upload-item">
+      <image src="http://jtb-1253661417.cossh.myqcloud.com/images/%E4%BA%8B%E6%95%85%E5%A4%84%E7%90%86/icons/jtb_icn_add_pic_back%402x.png"></image>
+      <text>后方部位</text>
+    </view>
+    <view class="upload-item">
+      <image src="http://jtb-1253661417.cossh.myqcloud.com/images/%E4%BA%8B%E6%95%85%E5%A4%84%E7%90%86/icons/jtb_icn_add_pic%402x.png"></image>
+    </view>
+  </view>
+</view>
+<view class="accident-type">
+  <view class="ac-type-item">
+    <label>事故类型</label>
+    <input type="text" placeholder="请选择事故类型" placeholder-class="style-pl" />
+    <view class="important">*</view>
+  </view>
+  <view class="ac-type-item">
+    <label>事故责任</label>
+    <radio-group class="radio-group">
+      <label class="radio" wx:for="{{items}}">
+        <radio color="#17b3ef" value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </radio-group>
+    <view class="important">*</view>
+  </view>
+  <view class="ac-type-item">
+    <label>事故原因</label>
+    <input type="text" placeholder="请选择事故原因" placeholder-class="style-pl" />
+  </view>
+  <view class="ac-type-item">
+    <label>事故情形</label>
+    <input type="text" placeholder="请描述事故情形" placeholder-style="font-size: 28rpx" auto-focus/>
+  </view>
+</view>
+<view class="person-info">
+  <view class="info-title">报警人信息</view>
+  <view class="info-item">
+    <label>报警人手机</label>
+    <input type="text" value="13000000000" />
+    <view class="important">*</view>
+  </view>
+  <view class="info-item">
+    <label>报警人姓名</label>
+    <input type="text" placeholder="请输入您的姓名" />
+  </view>
+  <view class="info-item">
+    <label>报警人车牌</label>
+    <picker class="car-num" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        {{array[index]}}
+        <image src="http://jtb-1253661417.cossh.myqcloud.com/images/%E6%88%91%E7%9A%84%E7%88%B1%E8%BD%A6/jtb_icn_choose%402x.png"></image>
+      </view>
+    </picker>
+    <input class="num-car" type="text" placeholder="请输入您的车牌" />
+    <view class="important">*</view>
+  </view>
+</view>
+<view class="showView{{showView?'':'hideView'}}">
+  <view class="close" bindtap="onChangeShowState">
+    <image src="http://jtb-1253661417.cossh.myqcloud.com/images/%E4%BA%8B%E6%95%85%E5%A4%84%E7%90%86/icons/jtb_icn_tag_delect_big%402x.png"></image>
+  </view>
+  <view class="info-title">甲方信息</view>
+  <view class="info-item">
+    <label>甲方手机</label>
+    <input type="text" placeholder="请输入甲方的手机号" />
+    <view class="important">*</view>
+  </view>
+  <view class="info-item">
+    <label>甲方姓名</label>
+    <input type="text" placeholder="请输入甲方的姓名" />
+  </view>
+  <view class="info-item">
+    <label>甲方车牌</label>
+    <picker class="car-num" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        {{array[index]}}
+        <image src="http://jtb-1253661417.cossh.myqcloud.com/images/%E6%88%91%E7%9A%84%E7%88%B1%E8%BD%A6/jtb_icn_choose%402x.png"></image>
+      </view>
+    </picker>
+    <input class="num-car" type="text" placeholder="请输入甲方的车牌" />
+    <view class="important">*</view>
+  </view>
+</view>
+<!--
+<view>
+  <button bindtap="onChangeShowState">{{showView?'隐藏':'显示'}}</button>
+</view>
+<view class="bright789_view_hide{{showView?'bright789_view_show':''}}">
+  <text class="bright789-text">我是被显示被隐藏控件</text>
+</view>-->
